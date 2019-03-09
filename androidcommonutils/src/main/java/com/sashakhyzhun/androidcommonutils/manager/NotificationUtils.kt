@@ -1,4 +1,4 @@
-package com.sashakhyzhun.androidcommonutils.notification
+package com.sashakhyzhun.androidcommonutils.manager
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -80,7 +80,6 @@ fun Context.sendNotification(
     }
 
     notificationBuilder.setContentIntent(pendingIntent)
-        //.setDefaults(Notification.DEFAULT_SOUND or Notification.DEFAULT_VIBRATE)
         .setLights(Color.BLUE, 1000, 1500)
         .setAutoCancel(true)
         .setWhen(System.currentTimeMillis())

@@ -1,4 +1,4 @@
-package com.sashakhyzhun.androidcommonutils.activity
+package com.sashakhyzhun.androidcommonutils.android
 
 import android.annotation.TargetApi
 import android.app.Activity
@@ -6,7 +6,6 @@ import android.graphics.Color
 import android.os.Build
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import com.sashakhyzhun.androidcommonutils.context.inputMethodService
 
 /**
  * @author SashaKhyzhun

@@ -1,4 +1,4 @@
-package com.sashakhyzhun.androidcommonutils.fragment
+package com.sashakhyzhun.androidcommonutils.android.fragment
 
 import androidx.annotation.IdRes
 import androidx.fragment.app.Fragment
@@ -16,20 +16,20 @@ enum class ChangeAnimation {
     FADE {
         override fun apply(fragmentTransaction: FragmentTransaction): FragmentTransaction =
             fragmentTransaction.setCustomAnimations(
-                R.anim.fade_in,
-                R.anim.fade_out,
-                R.anim.fade_in,
-                R.anim.fade_out
+                    /*android.*/ R.anim.fade_in,
+                    /*android.*/ R.anim.fade_out,
+                    /*android.*/ R.anim.fade_in,
+                    /*android.*/ R.anim.fade_out
             )
 
     },
     SLIDE {
         override fun apply(fragmentTransaction: FragmentTransaction): FragmentTransaction =
             fragmentTransaction.setCustomAnimations(
-                R.anim.enter_from_right,
-                R.anim.exit_to_left,
-                R.anim.enter_from_left,
-                R.anim.exit_to_right
+                    R.anim.enter_from_right,
+                    R.anim.exit_to_left,
+                    R.anim.enter_from_left,
+                    R.anim.exit_to_right
             )
 
     };
@@ -315,11 +315,11 @@ fun replaceFragmentWithBackstack(
 }
 
 fun replaceFragmentWithBackstack(
-    containerId: Int,
-    fragmentManager: FragmentManager,
-    fragment: Fragment,
-    changeAnimation: ChangeAnimation = ChangeAnimation.SLIDE,
-    tag: String
+        containerId: Int,
+        fragmentManager: FragmentManager,
+        fragment: Fragment,
+        changeAnimation: ChangeAnimation = ChangeAnimation.SLIDE,
+        tag: String
 ) {
     val transaction = fragmentManager.beginTransaction()
     transaction.addAnimation(changeAnimation)
@@ -340,11 +340,11 @@ fun replaceFragment(
 }
 
 fun replaceFragment(
-    containerId: Int,
-    fragmentManager: FragmentManager,
-    fragment: Fragment,
-    changeAnimation: ChangeAnimation = ChangeAnimation.SLIDE,
-    tag: String
+        containerId: Int,
+        fragmentManager: FragmentManager,
+        fragment: Fragment,
+        changeAnimation: ChangeAnimation = ChangeAnimation.SLIDE,
+        tag: String
 ) {
     val transaction = fragmentManager.beginTransaction()
     transaction.addAnimation(changeAnimation)
