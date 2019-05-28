@@ -21,9 +21,3 @@ fun View.setVisible() {
 fun View.setInvisible() {
     this.visibility = View.INVISIBLE
 }
-
-fun TextView.underline() {
-    val content = SpannableString(this.text)
-    content.setSpan(UnderlineSpan(), 0, content.length, 0)
-    this.text = content
-}

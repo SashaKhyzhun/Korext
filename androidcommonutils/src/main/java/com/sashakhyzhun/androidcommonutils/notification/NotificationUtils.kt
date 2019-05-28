@@ -21,13 +21,12 @@ fun Context.sendNotification(
     title: String,
     description: String
 ) {
-    val notificationManager =
-        this.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+    val nm = this.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
 
 
     val mIcon = BitmapFactory.decodeResource(this.resources, image)
-    val pendingIntent = PendingIntent.getActivity(
+    val pIntent = PendingIntent.getActivity(
         this,
         5555,
         intent,
@@ -73,18 +72,18 @@ fun Context.sendNotification(
                 }
 
                 notificationBuilder.setChannelId("10001")
-                notificationManager.createNotificationChannel(notificationChannel)
+                nm.createNotificationChannel(notificationChannel)
             }
 
         }
     }
 
-    notificationBuilder.setContentIntent(pendingIntent)
+    notificationBuilder.setContentIntent(pIntent)
         //.setDefaults(Notification.DEFAULT_SOUND or Notification.DEFAULT_VIBRATE)
         .setLights(Color.BLUE, 1000, 1500)
         .setAutoCancel(true)
         .setWhen(System.currentTimeMillis())
 
-    notificationManager.notify(123, notificationBuilder.build())
+    nm.notify(123, notificationBuilder.build())
 
 }
