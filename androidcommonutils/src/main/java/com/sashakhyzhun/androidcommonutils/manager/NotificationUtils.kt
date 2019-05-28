@@ -1,4 +1,4 @@
-package com.sashakhyzhun.androidcommonutils.notification
+package com.sashakhyzhun.androidcommonutils.manager
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -21,12 +21,13 @@ fun Context.sendNotification(
     title: String,
     description: String
 ) {
-    val nm = this.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+    val notificationManager =
+        this.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
 
 
     val mIcon = BitmapFactory.decodeResource(this.resources, image)
-    val pIntent = PendingIntent.getActivity(
+    val pendingIntent = PendingIntent.getActivity(
         this,
         5555,
         intent,
@@ -72,18 +73,17 @@ fun Context.sendNotification(
                 }
 
                 notificationBuilder.setChannelId("10001")
-                nm.createNotificationChannel(notificationChannel)
+                notificationManager.createNotificationChannel(notificationChannel)
             }
 
         }
     }
 
-    notificationBuilder.setContentIntent(pIntent)
-        //.setDefaults(Notification.DEFAULT_SOUND or Notification.DEFAULT_VIBRATE)
+    notificationBuilder.setContentIntent(pendingIntent)
         .setLights(Color.BLUE, 1000, 1500)
         .setAutoCancel(true)
         .setWhen(System.currentTimeMillis())
 
-    nm.notify(123, notificationBuilder.build())
+    notificationManager.notify(123, notificationBuilder.build())
 
 }

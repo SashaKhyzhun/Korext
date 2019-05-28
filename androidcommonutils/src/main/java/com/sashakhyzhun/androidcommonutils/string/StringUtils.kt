@@ -10,11 +10,6 @@ import android.util.Patterns
 fun empty() = ""
 
 
-fun fixPlurals(n: Int, s: String): String = when (n) {
-    0, 1 -> "$n $s"
-    else -> "$n $s" + "s"
-}
-
 /**
  * Check if this string is valid web url
  *

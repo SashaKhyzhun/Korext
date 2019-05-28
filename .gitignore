@@ -48,3 +48,6 @@ captures/
 .externalNativeBuild
 
 .DS_Store
+/gradle/
+.gradle/
+androidcommonutils/src/main/java/com/sashakhyzhun/androidcommonutils/math/
