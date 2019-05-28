@@ -1,4 +1,4 @@
-package com.sashakhyzhun.androidcommonutils.manager
+package com.sashakhyzhun.androidcommonutils.notification
 
 import android.app.NotificationChannel
 import android.app.NotificationManager

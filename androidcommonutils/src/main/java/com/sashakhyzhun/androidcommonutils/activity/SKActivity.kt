@@ -1,4 +1,4 @@
-package com.sashakhyzhun.androidcommonutils.android
+package com.sashakhyzhun.androidcommonutils.activity
 
 import android.annotation.TargetApi
 import android.app.Activity

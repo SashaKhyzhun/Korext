@@ -1,16 +1,14 @@
-package com.sashakhyzhun.androidcommonutils.android
+package com.sashakhyzhun.androidcommonutils.context
+
 
 import android.content.Context
 import android.view.inputmethod.InputMethodManager
-import android.net.ConnectivityManager
-import android.view.WindowManager
 
 
 /**
- * @author SashaKhyzhun
- * Created on 3/2/19.
+ * @author Alexander Khyzhun
+ * Created on 29 May, 2019
  */
-
 
 /**
  * Returns InputMethodManager
@@ -22,15 +20,7 @@ import android.view.WindowManager
  * @see InputMethodManager
  */
 fun Context.inputMethodService() =
-        getService<InputMethodManager>(Context.INPUT_METHOD_SERVICE)
-
-
-fun Context.connectivityManager() =
-        getService<ConnectivityManager>(Context.CONNECTIVITY_SERVICE)
-
-fun Context.windowManager() =
-        getService<WindowManager>(Context.WINDOW_SERVICE)
-
+    getService<InputMethodManager>(Context.INPUT_METHOD_SERVICE)
 
 /**
  * Returns class representing service with provided name
@@ -42,4 +32,4 @@ fun Context.windowManager() =
  * @see Context.getSystemService
  * @see Context.getSystemService
  */
-inline fun <reified T> Context.getService(name: String): T = getSystemService(name) as T
+private inline fun <reified T> Context.getService(name: String): T = getSystemService(name) as T

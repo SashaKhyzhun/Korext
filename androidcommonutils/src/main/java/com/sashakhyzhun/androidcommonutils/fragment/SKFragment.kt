@@ -1,4 +1,4 @@
-package com.sashakhyzhun.androidcommonutils.android
+package com.sashakhyzhun.androidcommonutils.fragment
 
 /**
  * @author SashaKhyzhun
