@@ -1,4 +1,4 @@
-package com.sashakhyzhun.korext.network
+package com.sashakhyzhun.korext.utils
 
 import android.net.ConnectivityManager
 import android.net.NetworkInfo

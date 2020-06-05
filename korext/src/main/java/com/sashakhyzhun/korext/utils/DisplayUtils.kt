@@ -1,4 +1,4 @@
-package com.sashakhyzhun.korext.converter
+package com.sashakhyzhun.korext.utils
 
 import android.content.res.Resources
 

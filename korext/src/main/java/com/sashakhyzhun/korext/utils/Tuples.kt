@@ -1,4 +1,4 @@
-package com.sashakhyzhun.korext.tuples
+package com.sashakhyzhun.korext.utils
 
 import java.io.Serializable
 

@@ -1,4 +1,4 @@
-package com.sashakhyzhun.korext.notification
+package com.sashakhyzhun.korext.utils
 
 import android.app.NotificationChannel
 import android.app.NotificationManager

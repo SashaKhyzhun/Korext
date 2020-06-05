@@ -5,6 +5,8 @@ import android.text.SpannableString
 import android.text.style.BackgroundColorSpan
 import android.text.style.UnderlineSpan
 import android.widget.TextView
+import androidx.annotation.ColorRes
+import androidx.core.content.ContextCompat
 
 /**
  * Created by Alexander Khyzhun on 03 February 2019.
@@ -45,4 +47,13 @@ fun TextView.removeSpan() {
         }
     }
     invalidate()
+}
+
+fun TextView.textColor(@ColorRes color: Int) {
+    this.setTextColor(
+        ContextCompat.getColor(
+            context,
+            color
+        )
+    )
 }
